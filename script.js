@@ -9,6 +9,7 @@ function grid(){
 function makeBlock(boxNumber){
     for(let i = 0; i < boxNumber ; i++){
         let row = document.createElement('div')
+        row.className = 'row'
         mainDiv.append(row)
         row.style.backgroundColor = 'red'
         for (let j = 0; j < boxNumber; j++){
