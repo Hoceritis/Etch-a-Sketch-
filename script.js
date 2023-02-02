@@ -11,11 +11,10 @@ function makeBlock(boxNumber){
         let row = document.createElement('div')
         row.className = 'row'
         mainDiv.append(row)
-        row.style.backgroundColor = 'red'
+        row.style.backgroundColor = 'rgba(255, 255, 128, .5)';
         for (let j = 0; j < boxNumber; j++){
             let square = document.createElement('div')
             square.className = 'box'
-            square.style.backgroundColor ='green'
             row.append(square)
         }
     }
