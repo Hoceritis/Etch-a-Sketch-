@@ -46,3 +46,9 @@ document.querySelectorAll('.box').forEach(item => {
         //console.log(hover)
     })
   })
+
+
+  button.addEventListener('click', () => {
+        let prompt = window.prompt('Enter the number of squares per side for the new grid')
+        console.log(prompt)
+  })
