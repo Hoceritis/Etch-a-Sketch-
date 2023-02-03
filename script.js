@@ -28,7 +28,9 @@ grid()
 document.querySelectorAll('.box').forEach(item => {
     item.addEventListener('mouseover', event => {
         let hover = event.target
-        hover.classList.toggle('.boxTwo')
+        hover.classList.toggle('boxTwo')
+        //hover.classList.add('boxTwo')
+        //hover.setAttribute('style','background-color: black;')
         //hover.style.backgroundColor = 'black'
         console.log(hover)
     })
