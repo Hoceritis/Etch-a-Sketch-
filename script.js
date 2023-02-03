@@ -50,5 +50,17 @@ document.querySelectorAll('.box').forEach(item => {
 
   button.addEventListener('click', () => {
         let prompt = window.prompt('Enter the number of squares per side for the new grid')
+        intCheck(prompt)
         console.log(prompt)
   })
+
+
+  function intCheck(integer){
+    if(Number.isInteger(integer)){
+        console.log("It's a number")
+    } else
+        console.log("It's not a number")
+  }
+
+
+  //(Number.isInteger(Number.parseInt(integer)))
