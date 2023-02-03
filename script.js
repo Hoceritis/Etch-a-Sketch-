@@ -1,9 +1,20 @@
+// main div
+
 let mainDiv = document.createElement('div')
 mainDiv.setAttribute('id','main-div')
 document.body.append(mainDiv)
 
+// squares and rows
+
 let row = document.createElement('div')
 let square = document.createElement('div')
+
+// users inputs button
+
+let button = document.createElement('button')
+button.setAttribute('id','button')
+mainDiv.append(button)
+button.textContent =' Click me'
 
 function grid(){
     makeBlock(4)
@@ -32,6 +43,6 @@ document.querySelectorAll('.box').forEach(item => {
         //hover.classList.add('boxTwo')
         //hover.setAttribute('style','background-color: black;')
         //hover.style.backgroundColor = 'black'
-        console.log(hover)
+        //console.log(hover)
     })
   })
