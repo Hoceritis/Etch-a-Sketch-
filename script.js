@@ -20,11 +20,9 @@ button.setAttribute('id','button')
 mainDiv.append(button)
 button.textContent =' Click me'
 
-function grid(){
-    makeBlock(4)
-}
+// functions
 
-function makeBlock(boxNumber){
+function grid(boxNumber){
     for(let i = 0; i < boxNumber ; i++){
         let row = document.createElement('div')
         mainDiv.append(row)
@@ -38,34 +36,26 @@ function makeBlock(boxNumber){
     }
 }
 
-grid()
-
-document.querySelectorAll('.box').forEach(item => {
-    item.addEventListener('mouseover', event => {
-        let hover = event.target
-        hover.classList.toggle('boxTwo')
-        //hover.classList.add('boxTwo')
-        //hover.setAttribute('style','background-color: black;')
-        //hover.style.backgroundColor = 'black'
-        //console.log(hover)
-    })
-  })
-
-
-  button.addEventListener('click', () => {
+button.addEventListener('click', () => {
         let prompt = window.prompt('Enter the number of squares per side for the new grid - between 1 and 100')
-        intCheck(prompt)
+        newGrid(prompt)
   })
 
+  function mouseOver(){
+    document.querySelectorAll('.box').forEach(item => {
+        item.addEventListener('mouseover', event => {
+            let hover = event.target
+            hover.classList.toggle('boxTwo')
+            //hover.classList.add('boxTwo')
+        })
+      })
+  }
 
-  function intCheck(integer){
+  function newGrid(integer){
     let convertToNumber = parseInt(integer, 10)
     if(Number.isInteger(convertToNumber) && convertToNumber < 100){
-        console.log("It's a valid number")
-        console.log(convertToNumber)
+        grid(convertToNumber)
+        mouseOver()
     } else
         console.log("It's not a valid number")
   }
-
-
-  //(Number.isInteger(Number.parseInt(integer)))
