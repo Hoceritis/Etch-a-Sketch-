@@ -1,3 +1,7 @@
+// prompt variable
+
+let prompt;
+
 // main div
 
 let mainDiv = document.createElement('div')
@@ -49,18 +53,18 @@ document.querySelectorAll('.box').forEach(item => {
 
 
   button.addEventListener('click', () => {
-        let prompt = window.prompt('Enter the number of squares per side for the new grid')
+        let prompt = window.prompt('Enter the number of squares per side for the new grid - between 1 and 100')
         intCheck(prompt)
   })
 
 
   function intCheck(integer){
     let convertToNumber = parseInt(integer, 10)
-    if(Number.isInteger(convertToNumber)){
-        console.log("It's a number")
+    if(Number.isInteger(convertToNumber) && convertToNumber < 100){
+        console.log("It's a valid number")
         console.log(convertToNumber)
     } else
-        console.log("It's not a number")
+        console.log("It's not a valid number")
   }
 
 
