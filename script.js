@@ -29,17 +29,22 @@ mainDiv.append(gridDiv)
 // functions
 
 function grid(boxNumber){
+    let squareSize = gridDiv.clientWidth / boxNumber
     for(let i = 0; i < boxNumber ; i++){
         let row = document.createElement('div')
         gridDiv.append(row)
         row.className = 'row'
         row.style.backgroundColor = 'rgba(255, 255, 128, .5)';
+        row.style.width = squareSize + 'px'
         for (let j = 0; j < boxNumber; j++){
             let square = document.createElement('div')
             row.append(square)
             square.className = 'box'
+            square.style.width = squareSize + 'px'
+            square.style.height = squareSize + 'px'
         }
     }
+
 }
 
 button.addEventListener('click', () => {
