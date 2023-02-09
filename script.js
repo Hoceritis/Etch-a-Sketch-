@@ -15,7 +15,7 @@ gridDiv.setAttribute('id','grid-div')
 // squares and rows
 
 let row = document.createElement('div')
-let square = document.createElement('div')
+let box = document.createElement('div')
 
 // users inputs button
 
@@ -36,11 +36,11 @@ function grid(boxNumber){
         row.className = 'row'
         row.style.width = squareSize + 'px'
         for (let j = 0; j < boxNumber; j++){
-            let square = document.createElement('div')
-            row.append(square)
-            square.className = 'box'
-            square.style.width = squareSize + 'px'
-            square.style.height = squareSize + 'px'
+            let box = document.createElement('div')
+            row.append(box)
+            box.className = 'box'
+            box.style.width = squareSize + 'px'
+            box.style.height = squareSize + 'px'
         }
     }
 
@@ -48,7 +48,7 @@ function grid(boxNumber){
 
 button.addEventListener('click', () => {
         let prompt = window.prompt('Enter the number of squares per side for the new grid - between 1 and 100')
-        
+        clearGrid()
         newGrid(prompt)
   })
 
@@ -69,6 +69,14 @@ button.addEventListener('click', () => {
         mouseOver()
     } else
         console.log("It's not a valid number")
+  }
+
+  function clearGrid(){
+    if(row && box){
+        row.remove()
+        box.remove()
+        console.log('element removed')
+    }
   }
 
   // reduce the size of the box when a treshold is reached
