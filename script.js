@@ -21,7 +21,7 @@ let square = document.createElement('div')
 
 let button = document.createElement('button')
 button.setAttribute('id','button')
-button.textContent =' Click me'
+button.textContent = 'New grid'
 
 document.body.append(button, mainDiv)
 mainDiv.append(gridDiv)
@@ -48,6 +48,7 @@ function grid(boxNumber){
 
 button.addEventListener('click', () => {
         let prompt = window.prompt('Enter the number of squares per side for the new grid - between 1 and 100')
+        
         newGrid(prompt)
   })
 
@@ -64,11 +65,7 @@ button.addEventListener('click', () => {
   function newGrid(integer){
     let convertToNumber = parseInt(integer, 10)
     if(Number.isInteger(convertToNumber) && convertToNumber < 100){
-        if(grid(convertToNumber) && convertToNumber > 30)
-        { 
-            document.getElementsByClassName('box').style.width = "20px"
-            document.getElementsByClassName('box').style.height = "20px"
-        }
+        grid(convertToNumber)
         mouseOver()
     } else
         console.log("It's not a valid number")
