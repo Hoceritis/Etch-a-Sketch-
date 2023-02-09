@@ -34,7 +34,6 @@ function grid(boxNumber){
         let row = document.createElement('div')
         gridDiv.append(row)
         row.className = 'row'
-        row.style.backgroundColor = 'rgba(255, 255, 128, .5)';
         row.style.width = squareSize + 'px'
         for (let j = 0; j < boxNumber; j++){
             let square = document.createElement('div')
@@ -56,8 +55,8 @@ button.addEventListener('click', () => {
     document.querySelectorAll('.box').forEach(item => {
         item.addEventListener('mouseover', event => {
             let hover = event.target
-            hover.classList.toggle('boxTwo')
-            //hover.classList.add('boxTwo')
+            //hover.classList.toggle('boxTwo')
+            hover.classList.add('boxTwo')
         })
       })
   }
