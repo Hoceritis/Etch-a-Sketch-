@@ -30,6 +30,7 @@ mainDiv.append(gridDiv)
 
 function grid(boxNumber){
     let squareSize = gridDiv.clientWidth / boxNumber
+    clearGrid(gridDiv)
     for(let i = 0; i < boxNumber ; i++){
         let row = document.createElement('div')
         gridDiv.append(row)
@@ -48,7 +49,6 @@ function grid(boxNumber){
 
 button.addEventListener('click', () => {
         let prompt = window.prompt('Enter the number of squares per side for the new grid - between 1 and 100')
-        clearGrid()
         newGrid(prompt)
   })
 
@@ -71,13 +71,11 @@ button.addEventListener('click', () => {
         console.log("It's not a valid number")
   }
 
-  function clearGrid(){
-    if(row && box){
-        row.remove()
-        box.remove()
-        console.log('element removed')
+  function clearGrid(parent){
+    while(parent.firstChild){
+        parent.removeChild(parent.firstChild);
     }
-  }
+}
 
-  // reduce the size of the box when a treshold is reached
+
   // delete the previous grid to create a new one
