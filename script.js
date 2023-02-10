@@ -23,10 +23,12 @@ let button = document.createElement('button')
 button.setAttribute('id','button')
 button.textContent = 'New grid'
 
-document.body.append(button, mainDiv)
-mainDiv.append(gridDiv)
+document.body.append(mainDiv)
+mainDiv.append(button,gridDiv)
 
 // functions
+
+newGrid(12)
 
 function grid(boxNumber){
     let squareSize = gridDiv.clientWidth / boxNumber

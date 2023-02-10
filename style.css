@@ -4,24 +4,26 @@
 
   #main-div{
     display: flex;
+    justify-content: center;
     margin-top: 100px;
     box-sizing: border-box;
   }
 
   #grid-div{
     display: flex;
-    border: 1px red solid;
+    border: 1px black solid;
     position: relative;
     width: 700px;
     height: 700px;
+    border-radius: 3px;
   }
 
 .box {
-    border: 1px solid black;
+    border: 1px solid rgba(223, 190, 190, 0.383)
 }
 
 .row {
-  background-color: rgba(207, 142, 176, 0.8);
+  background-color: rgba(247, 241, 244, 0.949);
 }
 
 .boxTwo {
@@ -45,7 +47,6 @@
   line-height: 20px;
   margin: 0 5px 10px 0;
   overflow: visible;
-  padding: 12px 40px;
   text-align: center;
   text-transform: none;
   touch-action: manipulation;
@@ -53,25 +54,17 @@
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  margin-bottom: 50px;
+  height: 50px;
+
 }
 
 #button:focus {
   text-decoration: none;
 }
 
-#button:hover {
-  text-decoration: none;
-}
-
 #button:active {
   box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
   outline: 0;
-}
-
-#button:not([disabled]):active {
-  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
-  transform: translate(2px, 2px);
 }
 
 @media (min-width: 768px) {
