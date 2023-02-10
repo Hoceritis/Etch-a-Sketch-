@@ -12,6 +12,12 @@ mainDiv.setAttribute('id','main-div')
 let gridDiv = document.createElement('div')
 gridDiv.setAttribute('id','grid-div')
 
+// title 
+
+let title = document.createElement('div')
+title.setAttribute('id','title')
+title.textContent ='Draw me a sheep'
+
 // squares and rows
 
 let row = document.createElement('div')
@@ -23,7 +29,7 @@ let button = document.createElement('button')
 button.setAttribute('id','button')
 button.textContent = 'New grid'
 
-document.body.append(mainDiv)
+document.body.append(title, mainDiv)
 mainDiv.append(button,gridDiv)
 
 // functions
